@@ -1,0 +1,26 @@
+.main-holder-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.each-cards {
+    display: flex; 
+    flex-basis: calc(50% - 40px);  
+    margin: 10px;
+    /* border: 1px solid black; */
+}
+
+.each-cards img{
+    height: 100%;
+    width: 100%;
+}
+
+.main-shopping {
+    text-align: center;
+}
+
+/* .item-details {
+    display: flex;
+} */

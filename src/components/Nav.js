@@ -13,14 +13,28 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/jsx-indent */
 /* eslint-disable react/react-in-jsx-scope */
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const App = () => {
+const Nav = () => {
     return (
-        <div>
-            <h3>Test</h3>
-        </div>
+        <nav>
+            <h3>Nav Bar</h3>
+            <ul>
+                <Link to="/">
+                    <li>Home</li>
+                </Link>
+
+                <Link to="/shopping">
+                    <li>Shop</li>
+                </Link>
+
+                <Link to="/checkout">
+                    <button>Checkout</button>
+                </Link>
+            </ul>
+        </nav>
     );
 };
 
-export default App;
+export default Nav;

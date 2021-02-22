@@ -13,14 +13,13 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/jsx-indent */
 /* eslint-disable react/react-in-jsx-scope */
-import React, { useState, useEffect } from "react";
 
-const App = () => {
+const Checkout = () => {
     return (
         <div>
-            <h3>Test</h3>
+            <h3>Checkout</h3>
         </div>
     );
 };
 
-export default App;
+export default Checkout;
