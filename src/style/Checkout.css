@@ -2,15 +2,17 @@
     text-align: center;
 }
 
-.main-main-checkout {
+.main-holder-cards-checkout {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    flex-flow: column nowrap;
+    margin: auto;
 }
 
 .main-checkout {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     margin: auto;
     width: 75%;
@@ -32,10 +34,20 @@
 .each-cards-checkout img{
     height: 15%;
     width: 15%;
-
 }
 
 .total-value {
-    margin-top: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: right;
+}
+
+.empty-item img{
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.empty-item {
     text-align: center;
 }
