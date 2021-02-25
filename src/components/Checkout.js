@@ -98,12 +98,11 @@ const Checkout = (props) => {
     
                 <div className="main-holder-cards-checkout">
                     {isEmpty ? emptyItem : setUpCheckout}
-                </div>
-                <div className="total-view">
                     <TotalView 
                         total={sum}
                     />
                 </div>
+
             </div>
         </div>
     );
