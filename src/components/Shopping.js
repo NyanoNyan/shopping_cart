@@ -76,3 +76,5 @@ const Shopping = (props) => {
 };
 
 export default Shopping;
+// First just shows add to cart
+// Then if a person clicks on add cart. Can add multiple items.
