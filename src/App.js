@@ -51,7 +51,10 @@ const Routes = () => {
     /// Functions set up ///
     useEffect(() => {
         const cartCounter = () => {
-            const sum = numItems.reduce((accum, currVal) => accum + currVal.count, 0);
+            let sum = numItems.reduce((accum, currVal) => accum + parseInt(currVal.count, 10), 0);
+            if (Number.isNaN(sum)) {
+                sum = " ";
+            }
             setCartCount({
                 ...cartCount, count: sum,
             });
