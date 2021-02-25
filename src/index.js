@@ -13,3 +13,8 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById("root"),
 );
+
+// Fix the "0000", due to accumulation of zeros when using cart counter
+// CSS to make the checkout look better when it's empty
+
+// Style the buttons
