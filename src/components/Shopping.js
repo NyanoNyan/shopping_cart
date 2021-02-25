@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable indent */
 /* eslint-disable react/jsx-indent-props */
 /* eslint-disable no-use-before-define */
@@ -15,12 +16,11 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable react/react-in-jsx-scope */
 import React, { useState, useEffect } from "react";
-import uniqid from "uniqid";
-import data from "./data";
 import "../style/Shopping.css";
 
 const SetUpCards = (props) => {
-    const { dataVal, cartCounter } = props;
+    const { dataVal, cartCount, tidyData, numItems } = props;
+
     return (
         <div>
             <div className="each-cards">
@@ -28,61 +28,39 @@ const SetUpCards = (props) => {
             </div>
 
             <div className="item-details">
-                <p >{dataVal.name}</p>
+                <p className="item-name">{dataVal.name}</p>
             </div>
             
-            <div>
-                <button className="minus" onClick={(e) => { cartCounter(e); }}>-</button>
-                <input 
+            <div id={dataVal.id} className="shopping-data">
+                <button className="minus" onClick={(e) => tidyData(e)}>-</button>
+                <input
                     className="input-type" 
                     type="number"
-                    onClick={(e) => cartCounter(e)} 
+                    value={numItems.count}
+                    onChange={(e) => tidyData(e)} 
+                    pattern="[0-9]*"
                 />
-                <button className="plus" onClick={(e) => { cartCounter(e); }}>+</button>
+                <button className="plus" onClick={(e) => tidyData(e)}>+</button>
                 <button>Add to Cart</button>
+                <div className="item-price">
+                    <p>£{dataVal.price.toFixed(2)}</p>
+                </div>
             </div>
 
         </div>
     );
 };
 
-const Shopping = () => {
-    // state configuration
-    const [cartCount, setCartCount] = useState(0);
-    const [itemCount, setItemcount] = useState(0);
-
-    // functions set up
-    useEffect(() => {
-        console.log(cartCount);
-    });
-
-    const cartCounter = (e) => {
-        console.log("I'm here");
-        const type = e.target.className;
-        switch (type) {
-            case "input-type":
-                setCartCount(e.target.value);
-                break;
-            
-            case "plus":
-                setCartCount(cartCount + 1);
-                break;
-            
-            case "minus":
-                setCartCount(cartCount - 1);
-                
-            // eslint-disable-next-line no-fallthrough
-            default:
-                console.log("Out of expression");
-        }
-        
-    };
-
-    const newCards = data.map((dataVal) => (
+const Shopping = (props) => {
+    const { cartCount, data, tidyData, numItems } = props;
+    console.log(cartCount);
+    const newCards = data.map((dataVal, id) => (
         <SetUpCards 
-            key={uniqid()}
+            key={"data" + id}
             dataVal={dataVal}
-            cartCounter={cartCounter}
+            cartCount={cartCount}
+            tidyData={tidyData}
+            numItems={numItems[id]}
         />
     ));
     
@@ -90,7 +68,7 @@ const Shopping = () => {
         <div className="main-shopping">
             <h3>Shopping Page</h3>
 
-            <div className="main-holder-cards">
+            <div className="main-holder-cards-shopping">
                 {newCards}
             </div>
         </div>

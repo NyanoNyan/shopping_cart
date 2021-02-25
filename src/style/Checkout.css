@@ -1,0 +1,41 @@
+.heading {
+    text-align: center;
+}
+
+.main-main-checkout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-checkout {
+    border: 1px solid black;
+    display: flex;
+    margin: auto;
+    width: 75%;
+}
+
+.main-holder-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.holder-main-item {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.each-cards-checkout img{
+    height: 15%;
+    width: 15%;
+
+}
+
+.total-value {
+    margin-top: 20%;
+    text-align: center;
+}

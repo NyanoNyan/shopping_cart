@@ -16,7 +16,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = (props) => {
+    const { cartCount } = props;
     return (
         <nav>
             <h3>Nav Bar</h3>
@@ -30,7 +31,11 @@ const Nav = () => {
                 </Link>
 
                 <Link to="/checkout">
-                    <button>Checkout</button>
+                    <button>
+                        Checkout:
+                        {" "}  
+                        {cartCount.count}
+                    </button>
                 </Link>
             </ul>
         </nav>

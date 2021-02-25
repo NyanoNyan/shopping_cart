@@ -1,4 +1,4 @@
-.main-holder-cards {
+.main-holder-cards-shopping {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -7,15 +7,21 @@
 
 .each-cards {
     display: flex; 
-    flex-basis: calc(50% - 40px);  
+    flex-basis: calc(50% - 20px);  
     margin: 10px;
     /* border: 1px solid black; */
 }
+
 
 .each-cards img{
     height: 100%;
     width: 100%;
 }
+
+/* .each-cards img{
+    height: 420px;
+    width: 340px;
+} */
 
 .main-shopping {
     text-align: center;
@@ -24,3 +30,7 @@
 /* .item-details {
     display: flex;
 } */
+
+.item-name {
+    word-wrap: normal;
+}
