@@ -21,7 +21,7 @@ const Nav = (props) => {
     const { cartCount } = props;
     return (
         <nav className="topnav">
-            <h3>Nav Bar</h3>
+            <h3>Smart Watch Shop</h3>
             <ul>
                 <Link to="/">
                     <li>Home</li>
