@@ -23,7 +23,7 @@ const Nav = (props) => {
         <nav className="topnav">
             <h3>Smart Watch Shop</h3>
             <ul>
-                <Link to="/">
+                <Link to="/shopping_cart">
                     <li>Home</li>
                 </Link>
 
