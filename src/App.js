@@ -24,6 +24,7 @@ import Nav from "./components/Nav";
 import Checkout from "./components/Checkout";
 
 import data from "./components/data";
+import "./style/App.css";
 
 function stateDataSetUp() {
     const dataHolder = [];
