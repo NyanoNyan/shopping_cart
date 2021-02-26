@@ -15,7 +15,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import "../style/Checkout.css";
 const SetUpItems = (props) => {
-    const { tidyData, removeItem, src, id, name, count } = props;
+    const { tidyData, removeItem, src, id, name, count, price } = props;
 
     return (
         <div className="holder-main-item" key={"data" + id}>
@@ -37,8 +37,11 @@ const SetUpItems = (props) => {
                     pattern="[1-9]*"
                 />
                 <button className="plus" onClick={(e) => tidyData(e)}>+</button>
-                <button name={id} onClick={(e) => { removeItem(e); }}>Remove</button>
             </div>
+            <div className="item-price">
+                <p>£{price.toFixed(2)}</p>
+            </div>
+            <button className="remove-btn" name={id} onClick={(e) => { removeItem(e); }}>Remove</button>
         </div>
     );
     // Should be the same as the one set up in Shopping, but with delete button this time.
@@ -74,6 +77,7 @@ const Checkout = (props) => {
                 id={obj.id}
                 name={obj.name}
                 count={obj.count}
+                price={obj.price}
                 tidyData={tidyData}
                 removeItem={removeItem}
             />
