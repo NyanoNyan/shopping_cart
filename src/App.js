@@ -174,7 +174,7 @@ const Routes = () => {
                 cartCount={cartCount}
             />
             <Switch>
-                <Route exact path="/" component={Home}/> 
+                <Route exact path="/shopping_cart" component={Home}/> 
                 <Route
                     exact
                     path="/shopping"
