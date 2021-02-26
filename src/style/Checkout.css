@@ -1,5 +1,6 @@
 .heading {
     text-align: center;
+    color: black;
 }
 
 .main-holder-cards-checkout {
@@ -50,4 +51,10 @@
 
 .empty-item {
     text-align: center;
+}
+
+.remove-btn {
+    margin-top: 6px;
+    color:white;
+    background-color: black;
 }
