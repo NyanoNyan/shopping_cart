@@ -61,7 +61,7 @@ const Checkout = (props) => {
     const validItems = numItems.filter((obj) => (obj.count > 0 || obj.count === "nothing"));
     const isEmpty = validItems.length === 0;
     const sum = validItems.reduce((accum, currVal) => {
-        console.log(currVal.count);
+        // console.log(currVal.count);
         if (currVal.count === "nothing") {
             return accum + (1 * currVal.price);
         }

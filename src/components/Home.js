@@ -26,7 +26,7 @@ const Home = () => {
             url: process.env.PUBLIC_URL + eachData.src,
         });
     });
-    console.log(dataHolder);
+    // console.log(dataHolder);
     return (
         <div className="main-holder-home">
             <h3 className="home-title">Get your Smart Watch</h3>

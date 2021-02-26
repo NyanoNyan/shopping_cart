@@ -53,7 +53,7 @@ const SetUpCards = (props) => {
 
 const Shopping = (props) => {
     const { cartCount, data, tidyData, numItems } = props;
-    console.log(cartCount);
+    // console.log(cartCount);
     const newCards = data.map((dataVal, id) => (
         <SetUpCards 
             key={"data" + id}

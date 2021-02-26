@@ -83,9 +83,9 @@ const Routes = () => {
                     break;
                 
                 case "minus":
-                    console.log(`In minus ${value}`);
+                    // console.log(`In minus ${value}`);
                     if ((value - 1) < 0) {
-                        console.log("zero alert");
+                        // console.log("zero alert");
                         value = 0;
                     } else {
                         value -= 1; 
@@ -111,9 +111,9 @@ const Routes = () => {
                     break;
                 
                 case "minus":
-                    console.log(`In minus ${value}`);
+                    // console.log(`In minus ${value}`);
                     if ((value - 1) < 0) {
-                        console.log("zero alert");
+                        // console.log("zero alert");
                         value = 0;
                     } else {
                         value -= 1; 
@@ -147,7 +147,7 @@ const Routes = () => {
 
         // Check for NaN values
         if (Number.isNaN(value)) {
-            console.log("NaN here");
+            // console.log("NaN here");
             value = "";
         }
 
