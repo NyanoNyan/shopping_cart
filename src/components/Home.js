@@ -14,11 +14,31 @@
 /* eslint-disable react/jsx-indent */
 /* eslint-disable react/react-in-jsx-scope */
 import React, { useState, useEffect } from "react";
+import SimpleImageSlider from "react-simple-image-slider";
+import data from "./data";
+import "../style/Home.css";
 
 const Home = () => {
+    const dataHolder = [];
+
+    data.map((eachData) => {
+        dataHolder.push({
+            url: process.env.PUBLIC_URL + eachData.src,
+        });
+    });
+    console.log(dataHolder);
     return (
-        <div>
-            <h3>Test</h3>
+        <div className="main-holder-home">
+            <h3 className="home-title">Get your Smart Watch</h3>
+            <div className="image-slider">
+                <SimpleImageSlider
+                    style={{margin: "auto", backgroundSize: "contain"}}
+                    width={400}
+                    height={600}
+                    images={dataHolder}
+                    showNavs={true}
+                />
+            </div>
         </div>
     );
 };
