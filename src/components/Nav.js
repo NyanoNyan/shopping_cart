@@ -15,11 +15,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from "react";
 import { Link } from "react-router-dom";
+import "../style/Nav.css";
 
 const Nav = (props) => {
     const { cartCount } = props;
     return (
-        <nav>
+        <nav className="topnav">
             <h3>Nav Bar</h3>
             <ul>
                 <Link to="/">
@@ -29,14 +30,17 @@ const Nav = (props) => {
                 <Link to="/shopping">
                     <li>Shop</li>
                 </Link>
+                <div className="checkout-basket" >
+                    <Link to="/checkout">
+                        <button className="cart-btn">
+                            <img src={process.env.PUBLIC_URL + "/imgs/cart.png"} />
+                            Checkout:
+                            {" "}  
+                            {cartCount.count}
+                        </button>
+                    </Link>
+                </div>
 
-                <Link to="/checkout">
-                    <button>
-                        Checkout:
-                        {" "}  
-                        {cartCount.count}
-                    </button>
-                </Link>
             </ul>
         </nav>
     );
