@@ -18,3 +18,5 @@ ReactDOM.render(
 // CSS to make the checkout look better when it's empty
 
 // Style the buttons
+// Set up Homepage
+// Image slider used (https://github.com/kimcoder/react-simple-image-slider#readme)
