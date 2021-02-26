@@ -20,3 +20,6 @@ ReactDOM.render(
 // Style the buttons
 // Set up Homepage
 // Image slider used (https://github.com/kimcoder/react-simple-image-slider#readme)
+
+// Issue with router and deplyoing in github pages due to homepage name in package differing from
+// url for home in development mode.
