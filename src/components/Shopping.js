@@ -41,7 +41,7 @@ const SetUpCards = (props) => {
                     pattern="[0-9]*"
                 />
                 <button className="plus" onClick={(e) => tidyData(e)}>+</button>
-                <button>Add to Cart</button>
+                {/* <button>Add to Cart</button> */}
                 <div className="item-price">
                     <p>£{dataVal.price.toFixed(2)}</p>
                 </div>
